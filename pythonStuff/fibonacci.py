@@ -1,5 +1,11 @@
 # Python Fibonacci series Program using While Loop
+from flask import Flask 
 
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return flask.render_template("useless.html", token="TEST")
 # Fibonacci series will start at 0 and travel upto below number
 Number = int(input("\nPlease Enter the Range Number: "))
 
