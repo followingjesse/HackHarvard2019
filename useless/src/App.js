@@ -12,18 +12,32 @@ class App extends React.Component {
   }
   render = () => {
     return (
-      <div style={{ textAlign: "center" }}>
-        <button onClick={this.increment} style={{ textAlign: "center" }}>
+      <div
+        style={{
+          textAlign: "center",
+          fontStyle: "italic",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <button
+          onClick={this.increment}
+          style={{
+            textAlign: "center",
+            fontSize: "72px"
+          }}
+        >
           Useless
         </button>
       </div>
     );
-  }
+  };
 
   increment = () => {
     this.state.counter = this.state.counter + 1;
     console.log(this.state.counter);
-  }
+  };
 }
 
 export default App;
